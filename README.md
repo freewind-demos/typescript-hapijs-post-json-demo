@@ -1,5 +1,5 @@
-TypeScript HapiJS Server Demo
-=============================
+TypeScript HapiJS Post JSON Demo
+================================
 
 使用[HapiJS](https://hapijs.com/)来创建一个NodeJS server.
 
@@ -10,16 +10,28 @@ npm install
 npm run demo
 ```
 
-It will start the server:
+将会启动Server:
 
 ```
 Server running at: http://localhost:8000
 ```
 
-And client can access: <http://localhost:8000/hello> with `GET` to get the answer:
+客户端：
 
 ```
-hello world
+brew install httpie
+http POST http://localhost:8000/hello name=hapijs
 ```
 
-![demo](./images/demo.jpg)
+将会得到回复：
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Date: Fri, 07 Sep 2018 12:09:56 GMT
+cache-control: no-cache
+content-length: 13
+content-type: text/html; charset=utf-8
+
+Hello, hapijs
+```
